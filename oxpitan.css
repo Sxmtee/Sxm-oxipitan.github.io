@@ -167,15 +167,15 @@ nav ul li:first-child:hover a ul.dropdown {
 }
   
 #bg-img1 {
-    background-image: url('C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/donate-1.jpg');
+    background-image: url('donate-1.jpg');
 }
   
 #bg-img2 {
-    background-image: url('C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/donate-2.jpg');
+    background-image: url('donate-2.jpg');
 }
   
 #bg-img3 {
-    background-image: url('C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/donate-3.jpg');
+    background-image: url('donate-3.jpg');
 }
   
 #bg-img1 h2, #bg-img1 p, #bg-img1 button, #bg-img2 h2, #bg-img2 p, #bg-img2 button, #bg-img3 h3, #bg-img3 p, #bg-img3 button {
@@ -310,7 +310,7 @@ nav ul li:first-child:hover a ul.dropdown {
   
 .imageMarquee {
     height: 100%; 
-    background-image: url("C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/Capture.JPG");
+    background-image: url("Capture.JPG");
     animation: imageMovement 15s linear infinite;
 }
   
@@ -323,7 +323,7 @@ nav ul li:first-child:hover a ul.dropdown {
 #divsix {
     width: 100%;
     height: 860px;
-    background-image: url("C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/sponsors.jpg");
+    background-image: url("sponsors.jpg");
 }
   
 .begger {
@@ -467,7 +467,7 @@ nav ul li:first-child:hover a ul.dropdown {
 
 #divtwelve {
     width: 100%;
-    height: 647px;
+    height: 400px;
     background-color: #ffffff;
 }
 
