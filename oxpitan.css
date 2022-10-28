@@ -1,0 +1,493 @@
+:root{
+    --topbar-color: #424242;
+    --orange-bg: #f1ae44;
+    --grey-white: #bfbfbf
+    --reddish: #e36955;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.Topmost{
+    width: 100%;
+    background-color: var(--topbar-color);
+    color: white;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.topleft span{
+    margin-right: 1rem;
+    font-size: smaller;
+}
+
+.topright span{
+    margin-right: 1rem;
+    color: var(--grey-white);
+    font-size: smaller;
+}
+
+.top-right span:last-child sup {
+    background-color: var(--orange-bg);
+    border-radius: 50%;
+    padding: 0 0.2rem;
+    color:white !important;
+}
+
+.rounded{
+    background-color: var(--orange-bg);
+    border-radius: 50%;
+    padding: 0.4rem 0.3rem;
+    color: black !important;
+}
+
+.mycolor{
+    color: var(--orange-bg);
+}
+
+nav{
+    width: 90%;
+    background-color: transparent;
+    position: fixed;
+    left: 5%;
+    padding-top: 1rem;
+    z-index: 5;
+}
+  
+nav ul{
+    float: right;
+    list-style: none;
+    display: inline-flex;
+}
+  
+nav ul li {
+    margin-right: 2rem;
+    transition: border-bottom-width 0.3s, padding-bottom 0.3s;
+    border: none;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+  
+nav ul li:hover {
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5rem;
+}
+  
+nav ul li:first-child::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2.5rem;
+    margin-left: 0.5rem;
+}
+  
+nav ul li:last-child a {
+    background-color: var(--reddish);
+    padding: 0.5rem 1.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    text-transform: uppercase !important;
+    font-size: smaller;
+}
+  
+.dropdown {
+    opacity: 0;
+    display: block;
+    top: 6rem;
+    background-color: white;
+    position: absolute;
+    transition: opacity 400ms;
+    color: black;
+    /* box-shadow: 0 2px 2px 1px #bfbfbf; */
+    border-radius: 3px;
+}
+  
+.dropdown li {
+    margin: 1rem 2rem 1rem 0;
+}
+  
+nav ul li:first-child:hover a ul.dropdown {
+    opacity: 1;
+}
+  
+.carousel {
+    height:100vh;
+    display: flex;
+    width: 300vw;
+    position: relative;
+    animation: slider 20s infinite;
+}
+  
+@keyframes slider {
+    0% {
+      left: 0;
+    }
+    30% {
+      left: 0;
+    }
+    35% {
+      left: -100%;
+    }
+    65% {
+      left: -100%;
+    }
+    70% {
+      left: -200.5%;
+    }
+    100% {
+      left: -200.5%;
+    }
+}
+  
+#bg-img1, #bg-img2, #bg-img3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+  
+#bg-img1 {
+    background-image: url('C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/donate-1.jpg');
+}
+  
+#bg-img2 {
+    background-image: url('C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/donate-2.jpg');
+}
+  
+#bg-img3 {
+    background-image: url('C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/donate-3.jpg');
+}
+  
+#bg-img1 h2, #bg-img1 p, #bg-img1 button, #bg-img2 h2, #bg-img2 p, #bg-img2 button, #bg-img3 h3, #bg-img3 p, #bg-img3 button {
+    position: absolute;
+    color: white;
+    z-index: 3;
+    margin-left: 30vw;
+} 
+  
+#bg-img1 h2, #bg-img2 h2, #bg-img3 h3 {
+    top: 30%;
+    text-transform: uppercase;
+} 
+  
+#bg-img1 p, #bg-img2 p, #bg-img3 p {
+    top: 35%;
+    font-size: 50px;
+} 
+  
+#bg-img1 button, #bg-img2 button, #bg-img3 button {
+    top: 80%;
+    background-color: var(--orange-bg);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    text-transform: uppercase;
+    cursor: pointer;
+} 
+  
+.overlay {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+}
+
+#divthree {
+    width: 100%;
+    height: 300px;
+    background-color: #e36955;
+}
+  
+.left-pane {
+    float: left;
+    background-color: #f1ae44;
+    width: 500px;
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+  
+.left-pane button {
+    background-color: #f1ae44;
+    border: none;
+    margin: none;
+    font-size: 60px;
+    color: white;
+    text-align: left;
+    padding-top: 5rem;
+    padding-left: 6rem;
+}
+  
+.left-pane button:hover {
+    cursor: pointer;
+}
+  
+.right-pane {
+    float: right;
+    margin-top: 7rem;
+    color: white;
+}
+  
+.line {
+    width: 520px;
+    height: 10px;
+    background-color: #f1ae44;
+    border-radius: 25px;
+}
+
+.right-pane div span {
+    font-size: 33px;
+}
+  
+.right-pane div span a:hover {
+    text-decoration: underline;
+}
+  
+.right-pane span {
+    margin-right: 10.3rem;
+}
+
+#divfour {
+    width: 100%;
+    height: 744px;
+    background-color: #f2f0ec;
+}
+
+#divfour h1 {
+    text-align: center;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 45px;
+}
+
+#divfour p {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+.spantext1{
+    float: left;
+    margin-left: 7rem;
+}
+
+.spantext2{
+    float: right;
+    margin-right: 7rem;
+    margin-top: 7px;
+}
+
+.img-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2%;
+}
+
+#divfive {
+    width: 100%;
+    height: 340px;
+}
+  
+.imageMarquee {
+    height: 100%; 
+    background-image: url("C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/Capture.JPG");
+    animation: imageMovement 15s linear infinite;
+}
+  
+@keyframes imageMovement {
+    100% {
+      background-position-x: 1320px;
+    }
+}
+
+#divsix {
+    width: 100%;
+    height: 860px;
+    background-image: url("C:/Users/USER/Desktop/Somtee/web tutorial/Oxpitan/Oxpitan-images/sponsors.jpg");
+}
+  
+.begger {
+    margin-top: 6rem;
+    margin-left: 6rem;
+}
+  
+.text-education {
+    margin-left: 3rem;
+}
+
+#divseven {
+    width: 100%;
+    height: 600px;
+    background-color: #424242;
+}
+
+.readmore7 {
+    background-color: #f1ae44;
+    color: white;
+    border: none;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    cursor: pointer;
+    height: 45px;
+    width: 120px;
+}
+  
+.difference-div {
+    float: right;
+    margin-top: 5rem;
+    margin-right: 5rem;
+}
+
+#diveight {
+    width: 100%;
+    height: 1005px;
+    background-color: white;
+}
+  
+.button-red {
+    border: none;
+    color: white;
+    background-color: red;
+    height: 50px;
+    width: 150px;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 3rem;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+  
+.button-green {
+    border: none;
+    color: white;
+    background-color: green;
+    height: 50px;
+    width: 150px;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 3rem;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+  
+.button-orange {
+    border: none;
+    color: white;
+    background-color: orange;
+    height: 50px;
+    width: 150px;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 3rem;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+  
+.latest {
+    float: left;
+    margin: 2.2rem;
+}
+  
+.upper-eight {
+    padding-top: 5rem;
+    text-align: center;
+    line-height: 5px;
+}
+  
+#diveight div span {
+    text-align: left;
+}
+  
+#diveight div span p {
+    margin-left: 4rem;
+}
+  
+#diveight div span a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#divnine {
+    width: 100%;
+    height: 492px;
+    background-color: white;
+}
+  
+.upper-nine {
+    padding-top: 3rem;
+    text-align: center;
+    line-height: 5px;
+}
+
+.category span {
+    float: left;
+    margin: 3.5rem;
+    font-size: 30px;
+    text-align: center;
+    line-height: 10px;
+    font-weight: bold;
+}
+
+#divten {
+    width: 100%;
+    height: 538px;
+    background-color: #f2f0ec;
+}
+
+#diveleven {
+    width: 100%;
+    height: 616px;
+    background-color: #ffffff;
+}
+
+#divtwelve {
+    width: 100%;
+    height: 647px;
+    background-color: #ffffff;
+}
+
+#divthirteen {
+    width: 100%;
+    height: 485px;
+    background-color: #f1ae44;
+}
+
+#divfourteen {
+    width: 100%;
+    height: 633px;
+    background-color: #424242;
+}
+
+#divfifteen {
+    width: 100%;
+    height: 64px;
+    background-color: #424242;
+    font-size: 20px;
+    color: var(--grey-white);
+    text-align: center;
+}
